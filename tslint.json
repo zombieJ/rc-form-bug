@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "no-reference": false,
+    "ban-types": false,
+    "only-arrow-functions": false,
+    "prefer-conditional-expression": false,
+    "no-empty-interface": false,
+    "no-this-assignment": false,
+    "member-ordering": false,
+    "no-console": false,
+    "jsx-boolean-value": false,
+    "no-unused-expression": false,
+    "jsx-no-lambda": false,
+    "no-submodule-imports": false,
+    "variable-name": false,
+    "callable-types": false,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "no-var-requires": false,
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "no-implicit-dependencies": false,
+    "ordered-imports": false
+  }
+}
