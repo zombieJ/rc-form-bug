@@ -9,7 +9,7 @@ export default class ComplexWrapper extends React.Component<
   FormComponentProps & { formKey: string }
 > {
   shouldComponentUpdate() {
-    // 实际项目中是在这里对form对key和其他props进行了一次shallowEqual
+    // 实际项目中是在这里对form的key和其他props进行了一次shallowEqual
     // 这里简单重现
     // const { form, ...rest } = this.props;
     // return !shallowEqual(this.props.form) || ! shallowEqual(rest);
