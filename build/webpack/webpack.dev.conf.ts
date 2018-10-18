@@ -6,7 +6,7 @@ import * as HtmlWebpackPlugin from "html-webpack-plugin";
 import * as ScriptExt from "script-ext-html-webpack-plugin";
 import * as CaseSensitivePlugin from "case-sensitive-paths-webpack-plugin";
 
-const fixed = process.env.FIXED === "FIXED";
+const fixed = process.env.FIXED;
 
 export default async function getDevConfig() {
   const rootPath = path.resolve(__dirname, `../..`);
@@ -48,11 +48,18 @@ export default async function getDevConfig() {
       new webpack.HotModuleReplacementPlugin(),
     ],
   });
-  if (fixed) {
+  if (fixed === 'FIXED') {
     devConfig.plugins!.push(
       new webpack.NormalModuleReplacementPlugin(
         /es\/createBaseForm\.js$/,
         path.resolve(__dirname, "../../src/createBaseForm.js"),
+      ),
+    );
+  } else if (fixed === 'zombiej') {
+    devConfig.plugins!.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /es\/createBaseForm\.js$/,
+        path.resolve(__dirname, "../../src/zombiejCreateBaseForm.js"),
       ),
     );
   }

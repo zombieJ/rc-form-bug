@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ts-node ./build/command/dev.ts",
     "start:fixed": "FIXED=FIXED ts-node ./build/command/dev.ts",
+    "start:zombiej": "FIXED=zombiej ts-node ./build/command/dev.ts",
     "build": "ts-node ./build/command/build.ts"
   },
   "repository": {
